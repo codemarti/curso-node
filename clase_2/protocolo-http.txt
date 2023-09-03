@@ -1,0 +1,39 @@
+¿Qué es HTTP?
+
+HTTP es el protocolo de transferencia de hipertexto.
+
+Imaginemos que tenemos a un usuario que desea obtener información. Este usuario dispone de un dispositivo que le permite realizar peticiones.
+Estas peticiones, en su interior, incluyen:
+
+  • URL de la petición
+  • Método de la petición
+  • Cabeceras de la petición (estas cabeceras se adjuntan a la petición para proporcionar más contexto)
+  • Un cuerpo de la petición (aquí se encuentran los datos que se desean transmitir)
+
+* También es válido referirse a las peticiones como "solicitudes" o "requests". *
+
+Cuando un usuario realiza una petición, esta se dirige a un servidor que procesará la información y, una vez que tenga resultados, los devuelve en forma de respuesta.
+Las respuestas contienen:
+
+  • Código de estado (por ejemplo, 200 para éxito, 400 para error, etc.)
+  • Un cuerpo de respuesta
+  • Cabeceras de respuesta
+
+En resumen, el protocolo HTTP funciona de la siguiente manera:
+
+  • Un usuario realiza una solicitud (request).
+  • Esta solicitud se dirige a un servidor.
+  • El servidor procesa la información y la devuelve como respuesta.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+  
+Códigos de respuesta:
+  • 100 - 199 Respuestas informativas
+  • 200 - 299 Respuestas satisfactorias
+  • 300 - 399 Redirecciones
+  • 400 - 499 Errores del cliente
+  • 500 - 599 Errores del servidor
+
+Las siguiente páginas proporcionan más información sobre esto:
+  • https://http.cat/
+  • https://developer.mozilla.org/en-US/docs/Web/HTTP/Status

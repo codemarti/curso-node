@@ -1,0 +1,176 @@
+Algunos comandos de NPM:
+
+  • npm --version: Muestra tu versión de npm.
+
+  • npm init: Sí, el comando npm init se utiliza para iniciar la creación de un nuevo proyecto de Node.js.
+    Sin embargo, no es "imprescindible" en el sentido de que puedes crear proyectos sin usarlo, pero es altamente recomendado
+    ya que te ayuda a generar un archivo "package.json" que es fundamental para gestionar las dependencias y la configuración del proyecto.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Configuración del proyecto: El comando npm init solicitará información sobre la configuración del proyecto, como el nombre, la versión,
+la descripción, el entry point, los scripts y más. La mayoría de los campos que mencionaste son correctos, pero algunos aspectos podrían aclararse:
+
+  • Entry point: Sí, es el archivo JavaScript principal desde el cual se inicia tu aplicación. Puede ser el archivo principal de una API,
+    una aplicación de línea de comandos o cualquier otro tipo de proyecto.
+
+  • Testing: Puedes proporcionar un script de prueba (por ejemplo, usando una herramienta como Mocha o Jest) para ejecutar pruebas automatizadas.
+
+  • Repositorio Git: Puedes proporcionar la URL de tu repositorio Git si deseas vincularlo con el proyecto.
+
+  • Keywords: Estas son palabras clave que ayudan a categorizar y etiquetar tu proyecto para que otros puedan encontrarlo más fácilmente.
+
+  • Licencia: Puedes elegir una licencia para tu proyecto, y generalmente es una buena práctica seleccionar una licencia que defina cómo otros pueden usar tu código.
+
+  • Autor: Puedes proporcionar el nombre del autor o del equipo que desarrolla el proyecto.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Semantic Versioning (SemVer): es un sistema de numeración de versiones que se utiliza en el mundo del desarrollo de software
+para definir cómo los cambios en un proyecto afectan la compatibilidad con versiones anteriores y cómo los usuarios y desarrolladores pueden
+interpretar el significado de esas versiones. SemVer consta de tres números: X.Y.Z, donde cada número tiene un significado específico:
+
+  • X (Major): El número de versión principal. Se incrementa cuando se realizan cambios que introducen incompatibilidades significativas con versiones anteriores. Esto significa que el software anterior puede no ser compatible con la nueva versión debido a cambios en la API, en la estructura interna o en el comportamiento del software.
+
+  • Y (Minor): El número de versión menor. Se incrementa cuando se agregan nuevas funcionalidades de manera compatible con versiones anteriores. Estas adiciones no deberían romper la compatibilidad con el código existente, permitiendo a los usuarios actualizar a la nueva versión sin problemas mayores.
+
+  • Z (Patch): El número de versión de corrección. Se incrementa cuando se realizan correcciones de errores y parches menores que no afectan la funcionalidad existente ni introducen nuevas características. Estas actualizaciones deberían ser completamente compatibles con versiones anteriores.
+
+Siguiendo esta convención, por ejemplo, si tienes una versión 1.2.3 de un software:
+
+  • Incrementar el número X a 2 (2.0.0) indicaría cambios significativos que podrían romper la compatibilidad.
+  • Incrementar el número Y a 3 (1.3.0) significaría que se han añadido nuevas características pero no se han realizado cambios que rompan la compatibilidad.
+  • Incrementar el número Z a 4 (1.2.4) indicaría que se han aplicado correcciones de errores menores.
+
+El uso de Semantic Versioning es importante para comunicar claramente la naturaleza de los cambios en una versión determinada,
+lo que ayuda a los usuarios y desarrolladores a tomar decisiones informadas sobre cuándo y cómo actualizar sus proyectos.
+
+Pero ten en cuenta que no todos siguen esto; por ejemplo, TypeScript.
+
+El símbolo '^' caret: se utiliza en las dependencias para permitir actualizaciones automáticas dentro de la misma versión mayor,
+asegurando que las mejoras menores y las correcciones de errores sean aplicadas, mientras que se evitan cambios que rompan la compatibilidad.
+Cuando se coloca el símbolo '^' antes de una versión en la definición de una dependencia, esto indica que se permiten actualizaciones automáticas
+dentro de la misma versión principal, pero no se permiten actualizaciones que rompan la compatibilidad con la versión actual.
+
+Pero a veces, tener las versiones más recientes puede romper nuestro proyecto.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Comando npm uninstall:
+
+La sintaxis básica del comando es la siguiente:
+  • npm uninstall <nombre_del_paquete>
+
+Aquí, <nombre_del_paquete> es el nombre del paquete que deseas desinstalar.
+Por ejemplo, si deseas desinstalar el paquete llamado "react", usarías el siguiente comando:
+  • npm uninstall react
+
+Esto eliminaría el paquete "lodash" y lo eliminaría de las dependencias registradas en tu archivo "package.json".
+Recuerda que después de ejecutar este comando, el paquete ya no estará disponible en tu proyecto a menos que lo vuelvas a instalar.
+
+Si también deseas eliminar el paquete de la lista de dependencias en tu archivo "package.json", puedes agregar la bandera --save (o -S para abreviar) al comando:
+  • npm uninstall lodash --save
+
+O simplemente puedes usar la versión abreviada:
+  • npm uninstall lodash -S
+
+Esto actualizará automáticamente tu archivo "package.json" para reflejar que el paquete ya no es una dependencia.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+StandardJS, también conocido como Standard Style:
+
+Es un conjunto de reglas y convenciones de estilo de codificación para JavaScript.
+Fue creado para promover la consistencia en el código, hacer que el código sea más legible y reducir las discusiones sobre
+el estilo de codificación dentro de los equipos de desarrollo.
+
+Las características principales de StandardJS son:
+
+  • Estilo consistente: StandardJS define un estilo de codificación estricto y consistente para JavaScript.
+  Esto incluye reglas relacionadas con la indentación, el uso de comillas, la declaración de variables, la organización del código y más.
+
+  • Reglas claras y predefinidas: StandardJS tiene un conjunto predefinido de reglas que los desarrolladores pueden seguir.
+  Esto elimina la necesidad de tomar decisiones sobre el estilo de codificación y reduce el debate sobre cuál es el "mejor" estilo a seguir.
+
+  • Automatización: Puedes usar herramientas como ESLint y Prettier en conjunto con StandardJS para asegurarte de que tu código siga las reglas definidas.
+  Estas herramientas pueden formatear automáticamente el código y mostrar advertencias o errores cuando se violan las reglas de estilo.
+
+  • Enfocado en la legibilidad: Uno de los objetivos principales de StandardJS es hacer que el código sea más legible y consistente para que sea
+  más fácil de mantener y comprender, tanto para el propio desarrollador como para otros colaboradores.
+
+Es importante tener en cuenta que StandardJS es solo una opción de estilo de codificación y no es necesariamente el enfoque adecuado para todos los proyectos o equipos.
+Algunos equipos pueden preferir estilos de codificación personalizados o seguir otras convenciones.
+La elección de adoptar StandardJS u otro estilo dependerá de las necesidades y preferencias específicas de tu proyecto y equipo.
+
+Para instalar StandardJS, podemos usar:
+  • npm install o npm i standard -D
+
+Para seguir estándares de código, podemos instalar Standard y después aplicar esta configuración en las dependencias de package.json:
+    • "eslintConfig": {
+        "extends": "standard"
+      }
+
+Y luego configurar tu settings.json para que siga los lineamientos del ESLint. También, se debe instalar el ESLint y el Error Lens para que detecten los errores.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+En el navegador no se muestran los console.log que se ejecutan en el servidor.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Para refrescar nuestro servidor al guardar cambios sin usar dependencias, podemos usar:
+  • node --watch <nombre_del_archivo>
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Nodemon
+
+Nodemon es una dependencia que detecta cambios en los archivos.
+Es altamente configurable, ya que no solo puede detectar cambios en archivos JavaScript, sino también en otros tipos de archivos como JSON, etc.
+Sin embargo, una desventaja de esta dependencia es que puede funcionar más lentamente y consumir más memoria en comparación con otras opciones, pero sigue siendo más poderosa.
+
+Para instalar Nodemon, puedes ejecutar el siguiente comando:
+  • npm install nodemon -D
+
+Una vez que esté instalado, puedes utilizar los scripts de npm para automatizar los comandos necesarios para ejecutar la aplicación.
+
+Ahora podriamos correr con el comando:
+  • npm run (para ver los scripts)
+  • npm run dev (para levantar el server)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+HTTP request methods:
+  • https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Extensión REST Client en VSC para tus APIs
+Para esto en nuestro directorio debemos crear un fichero de tipo .http
+
+Una vez instalada la extensión, primero usamos los metodos HTTP y despues el URL
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Express
+
+Este es un framework que nos servirá para agilazar la creación de nuestras aplicadas
+Para instalarlo (es una dependencia de produccion por ello la bandera del modo EXACTO):
+  • npm install express -E
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Middleware
+
+Estos procesas todas las request que pasan por las rutas que se le han asignado. Hacen cualquier tipo de lógica
+para tratar las request.
+Cuando termina se llama al metodo .next() para que continue su recorrido la petición.
+
+En pocas palabras el Middleware es una función que se ejecuta entre la petición y la respuesta.
+
+En las Middlewares se pueden trabajar:
+  • Todas las URLs:
+    app.use('/',(req, res, next) => {})
+
+  • O URLs específicas:
+    app.use('/???/???',(req, res, next) => {})
